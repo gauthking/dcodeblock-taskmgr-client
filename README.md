@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+#  Real-Time Task Manager with Notifications - Frontend Client - DCODEBLOCK Frontend Role Submission
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend client for the **DCODEBLOCK Real-Time Task Manager with Notifications application (Frontend Assignment-2)**, built with React, TypeScript, and Socket.io, providing task creation, status updates, and notifications, all wrapped with a responsive UI/UX Design. This project connects to a backend hosted at https://dcodeblock-taskmgr-serverapi.onrender.com and this frontend client is deployed on Render at https://dcodeblock-taskmgr-client.onrender.com.
 
-## Available Scripts
+Applicant Name & Details- [C P Gautham Krishna](https://www.linkedin.com/in/c-p-gautham-krishna-580450227/)
 
-In the project directory, you can run:
+- **Live Website**: [https://dcodeblock-taskmgr-client.onrender.com](https://dcodeblock-taskmgr-client.onrender.com)
+- **Demo Video**: (Add link here if available)
+- **Backend Server API Repository**: [https://github.com/gauthking/dcodeblock-taskmgr-serverapi](https://github.com/gauthking/dcodeblock-taskmgr-serverapi)
+  
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Running the Application](#running-the-application)
+- [Usage](#usage)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Task Management**: Create, view, update, and delete tasks.
+- **Real-Time Updates**: Live task updates and notifications using Socket.io.
+- **Filter and Sort**: Filter tasks by status and sort by due date or status.
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Real-Time Communication**: Socket.io
+- **Backend**: Express JS (Typescript Flavour), MongoDB
+## Installation
 
-### `npm run build`
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/gauthking/dcodeblock-taskmgr-client.git
+   cd dcodeblock-taskmgr-client
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Navigate into the Project Directory:**
+   ```bash
+   cd dcodeblock-taskmgr-client
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Install Dependencies: Ensure you have Node.js and npm installed. Then run:**
+   ```bash
+   npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Environment Variables
+You need to configure the following environment variables in a .env file at the root of your project:
+  ```bash
+    REACT_APP_API_BASE_URL=https://dcodeblock-taskmgr-serverapi.onrender.com
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Running the Application
+After setting up environment variables and installing dependencies, you can run the project locally with:
+   ```bash
+   npm run start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
+- Add Task: Enter the task title in the input box and click "Add Task."
+- Filter and Sort: Use the dropdown menus to filter by status or sort by due date/status.
+- Task Actions: Each task card includes options to change the status or delete the task.
+- Notifications: Real-time notifications for task updates appear as alerts.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
