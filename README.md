@@ -62,3 +62,18 @@ After setting up environment variables and installing dependencies, you can run 
 - Task Actions: Each task card includes options to change the status or delete the task.
 - Notifications: Real-time notifications for task updates appear as alerts.
 
+## Application Screenshots
+
+![image](https://github.com/user-attachments/assets/5af211a7-2078-481d-bbf1-4f460521e395)
+
+![image](https://github.com/user-attachments/assets/e234320b-0c71-4c26-b0af-ae0d88125956)
+
+![image](https://github.com/user-attachments/assets/db917f9f-9a85-4192-be17-37646b0e9423)
+
+![image](https://github.com/user-attachments/assets/c615e980-b779-450f-a576-6b727b1700fa)
+
+![image](https://github.com/user-attachments/assets/6368fb3e-9cb4-43ae-a8a0-c664ed87e494)
+
+![image](https://github.com/user-attachments/assets/efef648f-a99f-4f18-8c26-18fad9c32216)
+
+
