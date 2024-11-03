@@ -9,7 +9,7 @@ import axios from "../utils/axios";
 import { io } from "socket.io-client";
 import { Task } from "../@types/types";
 
-const socket = io("http://localhost:8001");
+const socket = io(process.env.REACT_APP_API_BASE);
 
 export default function TaskManager() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -22,7 +22,9 @@ export default function TaskManager() {
 
   useEffect(() => {
     const fetchTasks = async () => {
-      const response = await axios.get("http://localhost:8001/tasks");
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_BASE}/tasks`
+      );
       setTasks(response.data);
     };
 
@@ -74,7 +76,7 @@ export default function TaskManager() {
           status: "Pending",
           dueDate: new Date().toISOString().split("T")[0],
         };
-        await axios.post("http://localhost:8001/tasks", task);
+        await axios.post(`${process.env.REACT_APP_API_BASE}/tasks`, task);
         setNewTask("");
       }
     } catch (error) {
@@ -84,7 +86,7 @@ export default function TaskManager() {
 
   const deleteTask = async (id: string) => {
     try {
-      await axios.post(`http://localhost:8001/tasks/${id}`);
+      await axios.post(`${process.env.REACT_APP_API_BASE}/tasks/${id}`);
     } catch (error) {
       console.error("Error deleting task:", error);
     }
@@ -92,7 +94,9 @@ export default function TaskManager() {
 
   const updateTaskStatus = async (id: string, status: Task["status"]) => {
     try {
-      await axios.put(`http://localhost:8001/tasks/${id}`, { status });
+      await axios.put(`${process.env.REACT_APP_API_BASE}/tasks/${id}`, {
+        status,
+      });
     } catch (error) {
       console.log("Error updating task status - ", error);
     }
