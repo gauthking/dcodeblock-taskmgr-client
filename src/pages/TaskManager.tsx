@@ -5,7 +5,7 @@ import {
   BellIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import axios from "axios";
+import axios from "../utils/axios";
 import { io } from "socket.io-client";
 import { Task } from "../@types/types";
 
